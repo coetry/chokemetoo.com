@@ -1,0 +1,21 @@
+{
+  "name": "chokemetoo.com",
+  "description": "frontend for chokemetoo.com powered by next.js",
+  "version": "0.0.0",
+  "repository": {
+    "url": "git://github.com/coetry/chokemetoo.com.git"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
+  "dependencies": {
+    "next": "^7.0.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {},
+  "author": "Allen Hai <allenhai03@gmail.com> (https://allenhai.now.sh)"
+}
