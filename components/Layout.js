@@ -5,7 +5,7 @@ const Layout = props => <>
   <Head>
     <title>{props.title}</title>
   </Head>
-  <Navigation />
+  <Navigation changeHover={props.changeHover} />
   {props.children}
 </>
 

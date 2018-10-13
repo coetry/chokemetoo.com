@@ -1,9 +1,10 @@
 function Navigation (props) {
-  return <nav>
-    <a>about</a>
-    <a>products</a>
-    <a>collections</a>
-    <a>blog</a>
+
+ return <nav>
+    <a onMouseEnter={() => props.changeHover('about')}>about</a>
+    <a onMouseEnter={() => props.changeHover('products')}>products</a>
+    <a onMouseEnter={() => props.changeHover('collection')}>collections</a>
+    <a onMouseEnter={() => props.changeHover('blog')}>blog</a>
     <style jsx>{`
       nav {
         display: flex;
@@ -19,4 +20,9 @@ function Navigation (props) {
     `}</style>
   </nav>
 }
+
+function logHover (e) {
+  console.log('HOVER: ', e)
+}
+
 export default Navigation
