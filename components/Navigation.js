@@ -3,7 +3,7 @@ function Navigation (props) {
  return <nav>
     <a onMouseEnter={() => props.changeHover('about')}>about</a>
     <a onMouseEnter={() => props.changeHover('products')}>products</a>
-    <a onMouseEnter={() => props.changeHover('collection')}>collections</a>
+    <a onMouseEnter={() => props.changeHover('collections')}>collections</a>
     <a onMouseEnter={() => props.changeHover('blog')}>blog</a>
     <style jsx>{`
       nav {

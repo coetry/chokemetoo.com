@@ -6,14 +6,40 @@ export default class extends Component {
   constructor(){ 
     super()
     this.state = {
-      currentHover: 'about'
+      currentHover: 'about',
+      currentBgImg: '/static/candy.jpg',
+      bgImgs: [
+        '/static/bluecar.jpg',
+        '/static/coffeeshop.jpg',
+        '/static/candy.jpg',
+        '/static/water.jpg'
+      ]
     }
   }
 
   changeHover = currentHover => {
-    this.setState({ currentHover }, () => {
-      console.log(this.state)
-    })
+    switch(currentHover) {
+      case 'about': 
+        this.setState({
+          currentBgImg: this.state.bgImgs[0]
+        })
+        break
+      case 'products': 
+        this.setState({
+          currentBgImg: this.state.bgImgs[1]
+        })
+        break
+      case 'collections':
+        this.setState({
+          currentBgImg: this.state.bgImgs[2]
+        })
+        break 
+      case 'blog':
+      this.setState({
+        currentBgImg: this.state.bgImgs[3]
+      })
+      break
+    }
   }
 
   render() {
@@ -22,7 +48,7 @@ export default class extends Component {
         title='chokeme|too'
         changeHover={this.changeHover}
       >
-        <main>{this.state.currentHover}</main>
+        <main><img src={this.state.currentBgImg}/></main>
       </Layout>
       <style jsx global>{`
         * {
@@ -44,6 +70,10 @@ export default class extends Component {
           justify-content: center;
           align-items: center;
           font-size: 30px;
+        }
+        img {
+          width: 400px;
+          height: auto;
         }
       `}</style>
     </div>
