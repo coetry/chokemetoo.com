@@ -47,9 +47,10 @@ export default class extends Component {
       <Layout 
         title='chokeme|too'
         changeHover={this.changeHover}
+        currentBgImg={this.state.currentBgImg}
       >
-        <main><img src={this.state.currentBgImg}/></main>
       </Layout>
+        
       <style jsx global>{`
         * {
           box-sizing: border-box;
@@ -58,22 +59,6 @@ export default class extends Component {
         }
         body {
           font-family: monospace;
-        }
-      `}</style>
-      <style jsx>{`
-        main {
-          width: 800px;
-          height: 100vh;
-          margin: auto;
-          background-color: pink;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 30px;
-        }
-        img {
-          width: 400px;
-          height: auto;
         }
       `}</style>
     </div>
